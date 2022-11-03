@@ -6,14 +6,14 @@ namespace CSharp
     {
         static int Factorial(int a)
         {
-            int ret = 1;
-
-            for (int num = 1; num < a; num++)
+            // base case
+            if(a <= 1)
             {
-                ret *= num;
+                return 1;
             }
 
-            return ret;
+            // recursive case
+            return a * Factorial(a - 1);
         }
         static void Main(string[] args)
         {
