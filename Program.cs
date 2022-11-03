@@ -4,16 +4,23 @@ namespace CSharp
 {
     class Program
     {
-        static void Main(string[]args)
+        static int Factorial(int a)
         {
-            for(int i = 0; i < 5; i++)
+            int ret = 1;
+
+            for (int num = 1; num < a; num++)
             {
-                for(int j = 0; j <= i; j++)
-                {
-                    Console.Write("*");
-                }
-                Console.WriteLine();
+                ret *= num;
             }
+
+            return ret;
+        }
+        static void Main(string[] args)
+        {
+            int ret = Factorial(5);
+
+            Console.WriteLine(ret);
         }
     }
 }
+
